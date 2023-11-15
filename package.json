@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "turbo dev --continue",
+    "build": "turbo build",
+    "test": "turbo test",
+    "test:watch": "turbo test:watch",
+    "coverage": "turbo coverage",
+    "lint": "turbo lint",
+    "lint:fix": "turbo lint:fix",
+    "clean": "turbo clean && rm -rf node_modules",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo build --filter=docs^... && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.22.0",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.6.10"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "config-jest",
+  "version": "0.1.0",
+  "private": true,
+  "files": [
+    "jest.config.base.ts"
+  ],
+  "exports": {
+    "./jest.config.base": "./jest.config.base.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}

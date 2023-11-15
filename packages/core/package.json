@@ -1,0 +1,47 @@
+{
+  "publishConfig": {
+    "access": "public"
+  },
+  "name": "@stone/core",
+  "version": "0.15.0",
+  "description": "Javascript library core",
+  "author": "sunbeyond <sunbeyond@gmail.com> (http://github.com/sunbeyond)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunbeyond/stone"
+  },
+  "homepage": "https://github.com/sunbeyond/stone",
+  "bugs": {
+    "url": "https://github.com/sunbeyond/stone/issues"
+  },
+  "type": "module",
+  "files": [
+    "build",
+    "src"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsup src/index.ts --dts --watch",
+    "build": "tsup src/index.ts --format esm,cjs --clean --dts --minify",
+    "test": "jest --passWithNoTests --runInBand",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "prettier --write \"src/**/*.{js,ts}\"",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "config-ts": "workspace:*",
+    "config-jest": "workspace:*",
+    "eslint-config-benchmark": "workspace:*",
+    "eslint": "^8.53.0",
+    "tsup": "^5.10.1",
+    "typescript": "^4.5.3",
+    "ts-jest": "^29.1.1",
+    "@types/jest": "^29.5.8",
+    "jest": "^29.7.0"
+  }
+}
